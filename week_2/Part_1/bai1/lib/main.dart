@@ -19,14 +19,14 @@ class ExampleButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Các loại nút')),
+      appBar: AppBar(title: Text("Các loại nút")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             TextButton(
               onPressed: () {
-                showMessage(context, 'Text Button: Xóa dữ liệu');
+                showMessage(context, 'Text button: Xóa dữ liệu');
               },
               style: TextButton.styleFrom(
                 backgroundColor: Colors.red,
@@ -35,14 +35,14 @@ class ExampleButtons extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 elevation: 10,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0),
+                  borderRadius: BorderRadiusGeometry.circular(50.0),
                 ),
               ),
-              child: const Text("Xóa dữ liệu"),
+              child: const Text("Xóa dữ liệu"), //giải thích nút bấm là gì
             ),
             TextButton.icon(
               onPressed: () {
-                showMessage(context, 'Text Button Icon: Báo thức');
+                showMessage(context, 'Text button icon: Báo thức');
               },
               style: TextButton.styleFrom(
                 padding: EdgeInsets.all(20.0),
@@ -64,7 +64,7 @@ class ExampleButtons extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 elevation: 10,
               ),
-              child: const Text('Cập nhật'),
+              child: const Text("Cập nhật"),
             ),
             OutlinedButton(
               onPressed: () {
